@@ -1,4 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { useEffect } from 'react';
+import ReactGA from "react-ga4";
+
 
 export default function Document() {
   const meta = {
@@ -6,6 +9,10 @@ export default function Document() {
     description: 'Fascinated with React, Machine Learning, Blockchain, Web3, Smart Contracts, NFTs, Solana and Ethereum',
     image: 'https://jaime.mintitmedia.com/images/blog-banner.png',
   }
+
+  useEffect(() => {
+    ReactGA.initialize("G-76T38NTY0G");
+  }, [])
 
   return (
     <Html lang="en">
