@@ -1,6 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { useEffect } from 'react';
-import TagManager from 'react-gtm-module'
 
 
 export default function Document() {
@@ -9,14 +7,6 @@ export default function Document() {
     description: 'Fascinated with React, Machine Learning, Blockchain, Web3, Smart Contracts, NFTs, Solana and Ethereum',
     image: 'https://jaime.mintitmedia.com/images/blog-banner.png',
   }
-
-  useEffect(() => {
-    const tagManagerArgs = {
-      gtmId: 'GTM-5C2PVP7'
-    }
-   
-    TagManager.initialize(tagManagerArgs)
-  }, [])
 
   return (
     <Html lang="en">
