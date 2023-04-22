@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import { useEffect } from 'react';
-import ReactGA from "react-ga4";
+import TagManager from 'react-gtm-module'
 
 
 export default function Document() {
@@ -11,7 +11,11 @@ export default function Document() {
   }
 
   useEffect(() => {
-    ReactGA.initialize("G-76T38NTY0G");
+    const tagManagerArgs = {
+      gtmId: 'GTM-5C2PVP7'
+    }
+   
+    TagManager.initialize(tagManagerArgs)
   }, [])
 
   return (
